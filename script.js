@@ -31,7 +31,7 @@ function change_Array(){
     nameValues =[].map.call(inputvalues,function(dataInput){
       arrayInput.push(dataInput);
     });
-    console.log(arrayInput);
+    //console.log(arrayInput);
   }else{
     alert('Ingresar Solo letras minusculas sin caracteres');
     document.getElementById('input-texto').value = ''
