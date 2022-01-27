@@ -25,7 +25,7 @@ function change_Array(){
 
   let arrayInput = new Array();
   let inputvalues = document.getElementById("input-texto").value;
-  //console.log(inputvalues);
+  console.log(inputvalues);
 
   if ((/[A-Z]/.test(inputvalues) || /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(inputvalues)) == false){
     nameValues =[].map.call(inputvalues,function(dataInput){
