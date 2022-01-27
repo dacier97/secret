@@ -54,26 +54,16 @@ function change_Array(){
         });
     } 
         
-    var stringarr = arrayInput.join('');
-    aux = stringarr;
-    document.getElementById("msg").value = aux;
-    console.log(aux);
+  var stringarr = arrayInput.join('');
+  aux = stringarr;
+  document.getElementById("msg").value = aux;
+  console.log(aux);
   };
 
 
   console.log(aux);
-  /*function copia(){
-      
-    //let button = document.getElementById("btn-copy");
-    var msn = document.getElementById("msg");
-    msn.select();
-    document.execCommand("copy");
-    document.getElementById('msg').value = ''
-    document.getElementById('input-texto').value = ''
-  
- }*/
 
- function copia() {
+  function copia() {
 
   var copyText = document.getElementById("msg");
   copyText.select();
