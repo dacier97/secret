@@ -61,7 +61,7 @@ function change_Array(){
   };
 
 
-  //console.log(aux);
+  console.log(aux);
 
   function copia() {
 
