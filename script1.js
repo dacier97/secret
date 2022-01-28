@@ -18,26 +18,24 @@ No se permite acentuación de palabras
 Solo letras minusculas
 No se permite acentuación de palabras   
 */
-//var stringarr;
-//var aux = 'ui';
 
-function encrip_change_Array(){
+//----- funcion encriptar----//
+function encrip_Change_Array(){
 
   let arrayInput = new Array();
   let inputvalues = document.getElementById("input-texto").value;
-  //console.log(inputvalues);
-
+//------check si mayusculas, caracteres y asignamos como array------//
   if ((/[A-Z]/.test(inputvalues) || /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(inputvalues)) == false){
     nameValues =[].map.call(inputvalues,function(dataInput){
-      arrayInput.push(dataInput);
+    arrayInput.push(dataInput);
     });
-    //console.log(arrayInput);
+   //------mostramos alert y set campo-----//
   }else{
     alert('Ingresar Solo letras minusculas sin caracteres');
     document.getElementById('input-texto').value = ''
     document.getElementById('input-texto').focus();
   }
-
+ //-------loop para comparar y asignar reglas-----//
   for (let i=0; i<arrayInput.length; i++) {
           arrayInput.forEach((el,i)=>{
             if(el === "a"){
@@ -53,13 +51,13 @@ function encrip_change_Array(){
             } 
         });
     } 
-        
-  var stringarr = arrayInput.join('');
-  aux = stringarr;
+   //------unimos letter y asignamos campo DOM---//     
+  let stringarr = arrayInput.join('');
+  let aux = stringarr;
   document.getElementById("msg").value = aux;
-  //console.log(aux);
-  };
 
+  };
+  //------fucion copy palabra encriptada y set campos----//
   function copia() {
 
   var copyText = document.getElementById("msg");
@@ -70,35 +68,25 @@ function encrip_change_Array(){
   document.getElementById('input-texto').value = ''
   
 }
-
-
-
-    // Se puede crear un arreglo a partir de la cadena
-       var search = ['ai','enter','imes','ober','ufat'];
-   //console.log(search);
+  // Se puede crear un arreglo a partir de la cadena
+  var search = ['ai','enter','imes','ober','ufat'];
+  //console.log(search);
   // Solo tomé algunos caracteres, completa el arreglo
-      var  replace = ['a','e','i','o','u'];
+  var  replace = ['a','e','i','o','u'];
        
-
-
+//----funcion desencriptar----//
 function desencriptar() {
 
-    var msg1 = document.getElementById("input-texto").value;
-    console.log(msg1);
-    search.forEach((char, index) => {
-        // Remplazar cada caracter en la cadena
-        msg1 = msg1.replaceAll(char, replace[index]);
-        console.log(msg1);  
-    });
-    console.log(msg1);
-    document.getElementById("msg").value = msg1;
-    //return msg;
+  let  msg1 = document.getElementById("input-texto").value;
+  search.forEach((char, index) => {
+  // Remplazar cada caracter en la cadena
+  msg1 = msg1.replaceAll(char, replace[index]); 
+  });
+  document.getElementById("msg").value = msg1;
+    
 }
 
 
-//console.log(changeChars('sentermainai'));
-// Probando caracteres con tilde
-//console.log(changeChars('Hòlä a tódos; hasta mañana'));*/
 
 
 
