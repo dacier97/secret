@@ -18,20 +18,20 @@ No se permite acentuación de palabras
 Solo letras minusculas
 No se permite acentuación de palabras   
 */
-var stringarr = '';
-var aux = '';
+//var stringarr;
+//var aux = 'ui';
 
-function change_Array(){
+function encrip_change_Array(){
 
   let arrayInput = new Array();
   let inputvalues = document.getElementById("input-texto").value;
-  console.log(inputvalues);
+  //console.log(inputvalues);
 
   if ((/[A-Z]/.test(inputvalues) || /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(inputvalues)) == false){
     nameValues =[].map.call(inputvalues,function(dataInput){
       arrayInput.push(dataInput);
     });
-    console.log(arrayInput);
+    //console.log(arrayInput);
   }else{
     alert('Ingresar Solo letras minusculas sin caracteres');
     document.getElementById('input-texto').value = ''
@@ -57,15 +57,16 @@ function change_Array(){
   var stringarr = arrayInput.join('');
   aux = stringarr;
   document.getElementById("msg").value = aux;
-  console.log(aux);
+  //console.log(aux);
   };
 
-
-  console.log(aux);
+//var desenc = aux;
+//console.log(desenc);
 
   function copia() {
 
   var copyText = document.getElementById("msg");
+  //console.log(copyText.value);
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copyText.value);
@@ -73,6 +74,38 @@ function change_Array(){
   document.getElementById('input-texto').value = ''
   
 }
+
+
+
+    // Se puede crear un arreglo a partir de la cadena
+       var search = ['ai','enter','imes','ober','ufat'];
+   //console.log(search);
+  // Solo tomé algunos caracteres, completa el arreglo
+      var  replace = ['a','e','i','o','u'];
+       
+
+
+function desencriptar() {
+
+    var msg1 = document.getElementById("input-texto").value;
+    console.log(msg1);
+    search.forEach((char, index) => {
+        // Remplazar cada caracter en la cadena
+        msg1 = msg1.replaceAll(char, replace[index]);
+        console.log(msg1);  
+    });
+    console.log(msg1);
+    document.getElementById("msg").value = msg1;
+    //return msg;
+}
+
+
+//console.log(changeChars('sentermainai'));
+// Probando caracteres con tilde
+//console.log(changeChars('Hòlä a tódos; hasta mañana'));*/
+
+
+
 
 
 
