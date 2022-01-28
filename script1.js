@@ -60,9 +60,6 @@ function encrip_change_Array(){
   //console.log(aux);
   };
 
-//var desenc = aux;
-//console.log(desenc);
-
   function copia() {
 
   var copyText = document.getElementById("msg");
